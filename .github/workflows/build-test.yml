@@ -1,0 +1,17 @@
+name: Build and Test
+
+on: pull_request
+
+jobs:
+    build:
+        runs-on: ubuntu-lastest
+        steps:
+            - uses: actions/checkout@v4
+            - name: 파이썬 서리
+              uses: actions/setup-python@v5
+              with:
+                python-version: '3.10'
+            - name: 파이썬 실행 확인
+              run: python -V
+
+              
